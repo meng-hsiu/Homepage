@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@700&display=swap');
+
+.lxgw-wenkai-mono-tc-bold {
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    font-family: "LXGW WenKai Mono TC", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1{
+    font-size: 200%;
+    margin-bottom: 3rem !important;
+}
+h2{
+    font-size: 200%;
+}
+h3{
+    font-size: 130%;
+}
+*{
+    font-size: 102%;
+}
