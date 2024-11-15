@@ -7,9 +7,14 @@
         <div class="container d-flex justify-content-center">
             <div class="row w-100 py-4">
                 <div class="col-12">
-                    <h1>個人專題</h1>
+                    <RouterLink class="cta" to="/">
+                        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"/>
+                        </svg>
+                        <span class="hover-underline-animation fs-3">Home</span>
+                    </RouterLink>
                 </div>
-                <div class="col-12 mb-5 border-bottom pb-5">
+                <div class="col-12 mb-5 border-bottom py-5">
                     <a href="https://github.com/meng-hsiu/WindowsFormsBingoBingo" target="_blank"><h2 class=""><i class="fa-brands fa-github"></i>模擬台灣彩券BingoBingo</h2></a>
                     <div class="row">
                         <div class="col-md-5">
@@ -58,18 +63,45 @@
                 </div>
             </div>
         </div>
+        <!-- Button trigger modal -->
+        <div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <teleport to="body">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-container=".personal">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        </teleport>
+        </div>
     </div>
 </template>
 
 <style lang="css" scoped>
-a{
-    color:black;
-    text-decoration: none;
-}
-a:hover, a:visited, a:link, a:active {
-    text-decoration: none;
-}
-a:hover{
-    color:white;
+.modal-content{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+    );
 }
 </style>

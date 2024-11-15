@@ -3,25 +3,101 @@
 .lxgw-wenkai-mono-tc-bold {
     font-family: "LXGW WenKai Mono TC", monospace;
     font-weight: 700;
-    font-style: normal;
+    font-style: light;
 }
 
 *{
     font-family: "LXGW WenKai Mono TC", monospace;
     font-weight: 700;
-    font-style: normal;
+    font-style: light;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+a:hover, a:visited, a:link, a:active {
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color:white;
 }
 
 h1{
     font-size: 200%;
     margin-bottom: 3rem !important;
+    font-style: bold;
 }
 h2{
     font-size: 200%;
+    color: black;
 }
 h3{
     font-size: 130%;
 }
 *{
     font-size: 102%;
+    color:black;
+    /* color: white; */
 }
+text{
+    color:black;
+}
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 18px;
+    /* padding-left: 5px; */
+    text-transform: uppercase;
+}
+
+.cta span:hover{
+    color: white;
+}
+
+.cta svg {
+    color: black;
+    transform: translate(-8px,-4px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translate(-16px,-16px);
+    fill: white;
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
