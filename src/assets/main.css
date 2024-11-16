@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@700&display=swap');
 
+:root{
+    --a-tag-color:#000000;
+    --a-tag-hover-color:#ffffff;
+    --text-color:#000000;
+}
+
 .lxgw-wenkai-mono-tc-bold {
     font-family: "LXGW WenKai Mono TC", monospace;
     font-weight: 700;
@@ -12,18 +18,24 @@
     font-style: light;
 }
 
+/* 修改預設超連結 */
 a{
-    color:black;
+    color:var(--a-tag-color);
     text-decoration: none;
 }
-a:hover, a:visited, a:link, a:active {
-    color: black;
+a:visited, a:link, a:active {
+    color: var(--a-tag-color);
     text-decoration: none;
 }
 a:hover{
-    color:white;
+    color:var(--a-tag-hover-color);
+    text-decoration: none;
+}
+a:hover>span{
+    color: var(--a-tag-hover-color);
 }
 
+/* 標題修正 */
 h1{
     font-size: 200%;
     margin-bottom: 3rem !important;
@@ -38,12 +50,11 @@ h3{
 }
 *{
     font-size: 102%;
-    color:black;
+    color:var(--text-color);
     /* color: white; */
 }
-text{
-    color:black;
-}
+
+/* 超連結 */
 .cta {
     border: none;
     background: none;
@@ -59,18 +70,19 @@ text{
 }
 
 .cta span:hover{
-    color: white;
+    color: var(--a-tag-hover-color);
 }
 
 .cta svg {
-    color: black;
+    color: var(--a-tag-color);
     transform: translate(-8px,-4px);
     transition: all 0.3s ease;
 }
 
 .cta:hover svg {
-    transform: translate(-16px,-16px);
-    fill: white;
+    transform: translate(-8,-4px);
+    fill: var(--a-tag-hover-color);
+    /* scale: 1.3; */
 }
 
 .cta:active svg {
@@ -79,7 +91,7 @@ text{
 
 .hover-underline-animation {
     position: relative;
-    color: black;
+    color: var(--a-tag-color);
     padding-bottom: 20px;
 }
 
@@ -91,7 +103,7 @@ text{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: var(--a-tag-hover-color);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -101,3 +113,93 @@ text{
     transform-origin: bottom left;
 }
 
+/* 卡片 */
+:root{
+    --my-document-background-image:linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(201, 201, 201, 0.3)
+    );
+    --my-document-background-image-hover:
+    linear-gradient(
+        120deg,
+        rgba(141, 243, 200, 0.767),
+        rgba(94, 247, 107, 0.3)
+    );
+    --my-document-text-color:rgba(0, 100, 53, 0.445);
+    --my-document-text-color-hover:rgba(2, 73, 43, 0.767);
+
+}
+.my-document {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 350px;
+    width: 350px;
+    height: 55vh;
+    max-height: 500px;
+    background-image:var(--my-document-background-image);
+    color: var(--my-document-text-color);
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s 0s linear;
+    position: relative;
+    overflow: hidden;
+}
+.my-document:active {
+    scale: 0.95;
+}
+.my-document::after {
+    content: "";
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-image: var(--my-document-background-image-hover);
+    position: absolute;
+    top: 400px;
+    transition: top 0.2s 0s ease-in-out;
+    z-index: 1;
+}
+.my-document:hover::after {
+    top: -50px;
+}
+.my-document:hover p {
+    color:var(--my-document-text-color-hover);
+    scale: 1.2;
+}
+.my-document p {
+    color:var(--my-document-text-color);
+    position: absolute;
+    z-index: 10;
+    transition: 1s all;
+}
+
+/* Router動畫 */
+[data-transition="fade"] .router-view {
+    animation: fade 0.3s ease-in-out;
+}
+
+[data-transition="slide-left"] .router-view {
+    animation: slide-left 0.3s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+    transform: translateX(100%);
+    }
+    to {
+    transform: translateX(0);
+    }
+}

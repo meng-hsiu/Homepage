@@ -10,7 +10,6 @@ onMounted(()=>{
     console.log('test')
   });
 })
-
 </script>
 
 <template>
@@ -23,11 +22,12 @@ onMounted(()=>{
     <div class="container w-100 d-flex justify-content-center shadow">
       <div class="context-container w-100 h-100">
         <div class="row">
-          <!-- <div class="col-3 nav justify-content-center">
-            <NavbarComponent></NavbarComponent>
-          </div> -->
           <div class="col-12">
-            <RouterView></RouterView>
+            <RouterView v-slot="{ Component, route }">
+              <transition :name="route.meta.transition">
+                <component :is="Component" />
+              </transition>
+            </RouterView>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@ onMounted(()=>{
 }
 
 .context-container{
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   /* scroll-margin-block-start: 1px; */
   scrollbar-width: thin;
@@ -168,4 +168,38 @@ onMounted(()=>{
   display: none;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+
+.slide-left-enter-active, .slide-right-enter-active {
+  transition: all 0.5s ease;
+}
+.slide-left-leave-active, .slide-right-leave-active {
+  transition: all 0.5s ease;
+}
+
+/* slide-left 過渡效果 */
+.slide-left-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-left-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* slide-right 過渡效果 */
+.slide-right-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
 </style>
