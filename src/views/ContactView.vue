@@ -4,8 +4,8 @@
 
 <template>
     <div class="contact">
-        <div class="container d-flex justify-content-center">
-            <div class="row w-100 py-4">
+        <div class="container">
+            <div class="row py-4">
                 <div class="col-12">
                     <RouterLink class="cta" to="/">
                         <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
@@ -18,19 +18,19 @@
                     <h1 class="">Email:</h1>
                     <h1 class="">&emsp;&emsp;menghsiu0120@gmail.com</h1>
                 </div>
-                <div class="mail-button col-12 d-flex justify-content-center">
-                    <button><a href="mailto:menghsiu0120@gmail.com" class="fs-1">Email To Me</a></button>
-                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style lang="css" scoped>
+.container{
+    position: absolute;
+}
+
 .mail-button{
     width: 70%;
     position: absolute;
     bottom: 10vh;
-    /* right: 0; */
 }
 </style>

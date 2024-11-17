@@ -7,7 +7,7 @@ onMounted(()=>{
   const welcome = document.querySelector(".welcome-text");
   welcome.addEventListener("animationend", () => {
     document.getElementById('welcome').classList.add("invisible");
-    console.log('test')
+    document.querySelector('.my-container').classList.add("show");
   });
 })
 </script>
@@ -64,6 +64,7 @@ onMounted(()=>{
   height: 100%;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 
 .container{
@@ -163,6 +164,19 @@ onMounted(()=>{
     opacity: 0;
   }
 }
+
+.show{
+  animation: 0.3s show forwards;
+}
+@keyframes show{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 
 .invisible{
   display: none;
