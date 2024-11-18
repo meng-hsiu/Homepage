@@ -95,7 +95,7 @@
 
 <style lang="css" scoped>
 .personal{
-    position: relative;
+    position: absolute;
 }
 .modal-content{
     background-color: transparent;

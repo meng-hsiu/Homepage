@@ -25,12 +25,12 @@
 
 <style lang="css" scoped>
 .contact{
-    position: relative;
+    position: absolute;
 }
 
 .mail-button{
+    position: absolute;
     width: 70%;
-    /* position: absolute; */
     bottom: 10vh;
 }
 </style>

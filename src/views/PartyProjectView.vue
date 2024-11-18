@@ -41,6 +41,6 @@
 
 <style lang="css" scoped>
 .party{
-    position: relative;
+    position: absolute;
 }
 </style>

@@ -38,21 +38,21 @@
       </div>
       <div class="row pt-4">
         <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center justify-content-lg-start">
-          <RouterLink class="cta" to="/PersonalProject">
+          <RouterLink class="cta" to="/personalProject">
             <div class="my-document shadow">
               <p>個人作品</p>
             </div>
           </RouterLink>
         </div>
         <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
-          <RouterLink class="cta" to="/PartyProject">
+          <RouterLink class="cta" to="/partyProject">
             <div class="my-document shadow">
               <p>小組作品</p>
             </div>
           </RouterLink>
         </div>
         <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center justify-content-lg-end">
-          <RouterLink class="cta" to="/Contact">
+          <RouterLink class="cta" to="/contact">
             <div class="my-document shadow">
               <p>聯絡我</p>
             </div>

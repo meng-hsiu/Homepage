@@ -25,7 +25,7 @@ onMounted(()=>{
           <div class="col-12">
             <RouterView v-slot="{ Component, route }" mode="out-in">
               <transition :name="route.meta.transition">
-                <component :is="Component" />
+                <component :is="Component" :key="route.path" />
               </transition>
             </RouterView>
           </div>
