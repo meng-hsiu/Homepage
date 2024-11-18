@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="row pt-4">
-        <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center justify-content-lg-start">
           <RouterLink class="cta" to="/PersonalProject">
             <div class="my-document shadow">
               <p>個人作品</p>
@@ -51,7 +51,7 @@
             </div>
           </RouterLink>
         </div>
-        <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center justify-content-lg-end">
           <RouterLink class="cta" to="/Contact">
             <div class="my-document shadow">
               <p>聯絡我</p>
@@ -66,10 +66,9 @@
 <style lang="css" scoped>
 .my-card{
   position: relative;
-  /* max-width: 500px; */
   min-width: 350px;
   width: 100%;
-  height: 30vh;
+  height: 65vh;
   border-radius: 20px;
   overflow: hidden;
   transition: 0.3s all;
@@ -81,12 +80,14 @@
 
 .my-card-img{
   position: absolute;
-  top:15%;
-  left: 5%;
-  min-width: 10vh;
-  min-height: 10vh;
-  width: 10vw;
-  height: 10vw;
+  top:20%;
+  left: 2.5%;
+  min-width: 80px;
+  max-width: 230px;
+  min-height: 80px;
+  max-height: 230px;
+  width: 15vw;
+  height: 15vw;
   background-color: rgba(255, 255, 255,0.5);
   backdrop-filter: blur(100px);
   z-index: 1;

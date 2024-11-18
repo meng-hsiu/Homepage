@@ -94,6 +94,9 @@
 </template>
 
 <style lang="css" scoped>
+.personal{
+    position: relative;
+}
 .modal-content{
     background-color: transparent;
     backdrop-filter: blur(20px);

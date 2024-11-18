@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="contact">
+    <div class="contact" style="height: 100vh;">
         <div class="container">
-            <div class="row py-4">
+            <div class="row w-100 py-4">
                 <div class="col-12">
                     <RouterLink class="cta" to="/">
                         <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
@@ -14,7 +14,7 @@
                         <span class="hover-underline-animation fs-3">Home</span>
                     </RouterLink>
                 </div>
-                <div class="col-12 py-5">
+                <div class="col-12 py-4">
                     <h1 class="">Email:</h1>
                     <h1 class="">&emsp;&emsp;menghsiu0120@gmail.com</h1>
                 </div>
@@ -24,13 +24,13 @@
 </template>
 
 <style lang="css" scoped>
-.container{
-    position: absolute;
+.contact{
+    position: relative;
 }
 
 .mail-button{
     width: 70%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 10vh;
 }
 </style>

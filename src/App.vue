@@ -23,7 +23,7 @@ onMounted(()=>{
       <div class="context-container w-100 h-100">
         <div class="row">
           <div class="col-12">
-            <RouterView v-slot="{ Component, route }">
+            <RouterView v-slot="{ Component, route }" mode="out-in">
               <transition :name="route.meta.transition">
                 <component :is="Component" />
               </transition>
@@ -109,7 +109,8 @@ onMounted(()=>{
 .context-container{
   overflow-y: auto;
   overflow-x: hidden;
-  /* scroll-margin-block-start: 1px; */
+  position: absolute;
+  padding: 0% 1.5% 0% 1.5%;
   scrollbar-width: thin;
   scrollbar-color: #c0c0c0 transparent;
 }
@@ -183,7 +184,7 @@ onMounted(()=>{
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.3s ease-in-out;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
@@ -204,7 +205,7 @@ onMounted(()=>{
 }
 .slide-left-leave-to {
   transform: translateX(-100%);
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 /* slide-right 過渡效果 */

@@ -14,27 +14,27 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue'),
-      meta: { transition: 'slide-right' },
-      
-    },
-    {
-      path: '/Contact',
-      name: 'Contact',
-      component: () => import('../views/ContactView.vue'),
-      meta: { transition: 'slide-right' },
+      meta: { transition: 'fade' },
       
     },
     {
       path: '/PersonalProject',
       name: 'PersonalProject',
       component: () => import('../views/PersonalProjectView.vue'),
-      meta: { transition: 'slide-right' },
+      meta: { transition: 'fade' },
     },
     {
       path: '/PartyProject',
       name: 'PartyProject',
       component: () => import('../views/PartyProjectView.vue'),
-      meta: { transition: 'slide-right' },
+      meta: { transition: 'fade' },
+    },
+    {
+      path: '/Contact',
+      name: 'Contact',
+      component: () => import('../views/ContactView.vue'),
+      meta: { transition: 'fade' },
+      
     },
   ],
 })

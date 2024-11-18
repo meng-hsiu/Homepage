@@ -18,6 +18,10 @@
     font-style: light;
 }
 
+p{
+    margin: 0 !important;
+}
+
 /* 修改預設超連結 */
 a{
     color:var(--a-tag-color);
@@ -53,6 +57,7 @@ h3{
     color:var(--text-color);
     /* color: white; */
 }
+
 
 /* 超連結 */
 .cta {
@@ -137,8 +142,8 @@ h3{
     align-items: center;
     min-width: 350px;
     width: 350px;
-    height: 55vh;
-    max-height: 500px;
+    height: 15vh;
+    max-height: 270px;
     background-image:var(--my-document-background-image);
     color: var(--my-document-text-color);
     font-size: 32px;

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="home" style="height: auto;">
+  <div class="about">
     <div class="container d-flex justify-content-center">
       <div class="row w-100 py-4">
         <div class="col-12 pb-5">
@@ -73,5 +73,7 @@
 </template>
 
 <style lang="css" scoped>
-
+.about{
+  position: absolute;
+}
 </style>
