@@ -12,7 +12,12 @@
             <div class="my-card-title">
             </div>
             <div class="my-card-body">
-              <div class="my-card-body-text">&emsp;&emsp;Hi，我是謝孟修，先前在醫院工作，接受完資展國際全端工程師培訓後轉職中，已有基本前、後端及資料庫操作能力，希望能成為一位工程師。</div>
+              <div class="my-card-body-text">
+                <span style="font-size:clamp(1rem,3vw,3rem); color:darkcyan">Hi</span>，我是謝孟修，先前在醫院工作，接受完<span style="text-decoration: underline;">資展國際全端工程師</span>培訓後轉職後，已有基本前、後端及資料庫操作能力，希望能成為一位工程師。
+                <br>
+                <br>
+                歡迎來到我的個人頁面，可以按下下方按鈕來查看更多的資訊！
+              </div>
               <div class="my-card-body-text-link">
                 <RouterLink class="cta" to="/about">
                     <span class="hover-underline-animation"> 更多資訊 </span>

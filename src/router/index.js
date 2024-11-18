@@ -53,5 +53,12 @@ const router = createRouter({
 //   console.log(toDepth,fromDepth)
 //   to.meta.transition = toDepth < fromDepth ? 'slide-right' : 'fade'
 // })
+router.beforeEach((to, from, next) => {
+  if (to.path !== to.path.toLowerCase()) {
+    next({ path: to.path.toLowerCase(), replace: true });
+  } else {
+    next();
+  }
+});
 
 export default router

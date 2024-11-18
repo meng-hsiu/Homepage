@@ -10,6 +10,7 @@ onMounted(()=>{
     document.querySelector('.my-container').classList.add("show");
   });
 })
+
 </script>
 
 <template>
