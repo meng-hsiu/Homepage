@@ -4,6 +4,7 @@
     --a-tag-color:#000000;
     --a-tag-hover-color:#ffffff;
     --text-color:#000000;
+    --my-card-base-height: 55vh;
 }
 
 .lxgw-wenkai-mono-tc-bold {
@@ -173,7 +174,7 @@ h3{
 }
 .my-document:hover p {
     color:var(--my-document-text-color-hover);
-    scale: 1.2;
+    scale: 1.5;
 }
 .my-document p {
     color:var(--my-document-text-color);

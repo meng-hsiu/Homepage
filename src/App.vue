@@ -66,6 +66,7 @@ onMounted(()=>{
   top: 0;
   left: 0;
   opacity: 0;
+  display: none;
 }
 
 .container{
@@ -168,6 +169,7 @@ onMounted(()=>{
 }
 
 .show{
+  display: block;
   animation: 0.3s show forwards;
 }
 @keyframes show{

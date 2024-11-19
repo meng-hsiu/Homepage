@@ -1,18 +1,30 @@
 <script setup>
+import { defineEmits, onMounted } from 'vue';
 
+let about = null;
+
+onMounted(()=>{
+  about = document.querySelector('.about');
+  // document.querySelector('.typewriter').addEventListener('animationend', () => {
+  //   document.querySelector('.typewriter').style.animation = '';
+  // })
+})
+
+const emit = defineEmits(['triggerParent']);
+
+const handleClick = () => {
+  // 發送事件給父組件
+  emit('triggerParent');
+};
 </script>
 
 <template>
   <div class="about">
     <div class="container d-flex justify-content-center">
       <div class="row w-100 py-4">
-        <div class="col-12 pb-5">
-            <RouterLink class="cta" to="/">
-                <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"/>
-                </svg>
-                <span class="hover-underline-animation fs-3">Home</span>
-            </RouterLink>
+        <div class="col-12 pb-5 d-flex justify-content-center">
+          <!-- <button>開關</button> -->
+          <div @click="handleClick" class="typewriter"><h1 style="color: black;">>>點我看更多個人訊息<<</h1></div>
         </div>
         <div class="col-12 mb-5 pb-5 border-bottom">
           <div class="row">
@@ -74,6 +86,31 @@
 
 <style lang="css" scoped>
 .about{
-  position: absolute;
+  position: relative;
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255) }
 }
 </style>

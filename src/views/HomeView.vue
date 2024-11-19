@@ -1,4 +1,36 @@
 <script setup>
+import { onMounted, ref } from 'vue';
+import AboutComponent from '../components/AboutComponent.vue';
+
+const about_container_toggle = ref(false);
+let about_container = null;
+const about_height = ref('');
+let about = null;
+
+
+onMounted(()=>{
+  about_container = document.querySelector('.about-container');
+  about = document.querySelector('.about')
+})
+
+
+const parentFunction = () => {
+  if(about_container_toggle.value){
+    // about_container.classList.remove('about-container-open');
+    about_container.style.height = '10vh';
+    about_container_toggle.value = !about_container_toggle.value
+  }
+  else{
+    // about_container.classList.add('about-container-open');
+    about_container.style.height = `${about.scrollHeight}px`;
+    about_container_toggle.value = !about_container_toggle.value
+  }
+  // console.log('父組件方法被觸發了！');
+};
+
+
+
+
 </script>
 
 <template>
@@ -10,35 +42,25 @@
             <div class="my-card-img">
             </div>
             <div class="my-card-title">
+              <div class="row w-100 h-100">
+              </div>
             </div>
             <div class="my-card-body">
               <div class="my-card-body-text">
-                <span style="font-size:clamp(1rem,3vw,3rem); color:darkcyan">Hi</span>，我是謝孟修，先前在醫院工作，接受完<span style="text-decoration: underline;">資展國際全端工程師</span>培訓後轉職後，已有基本前、後端及資料庫操作能力，希望能成為一位工程師。
+                <span style="font-size:clamp(1rem,3vw,3rem); color:darkcyan">Hi</span>，我是謝孟修，先前在醫院工作，接受完<span style="text-decoration: underline;">資展國際全端工程師</span>培訓後轉職後，已有基本前、後端及資料庫操作能力，希望能成為一名工程師。
                 <br>
                 <br>
-                歡迎來到我的個人頁面，可以按下下方按鈕來查看更多的資訊！
-              </div>
+                歡迎來到我的個人頁面，可點擊下方按鈕查看更多訊息
+                </div>
               <div class="my-card-body-text-link">
-                <RouterLink class="cta" to="/about">
-                    <span class="hover-underline-animation"> 更多資訊 </span>
-                    <svg
-                      id="arrow-horizontal"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="10"
-                      viewBox="0 0 46 16"
-                    >
-                      <path
-                        id="Path_10"
-                        data-name="Path 10"
-                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                        transform="translate(30)"
-                      ></path>
-                    </svg>
-                </RouterLink>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="about-container shadow">
+          <AboutComponent @triggerParent="parentFunction()"></AboutComponent>
         </div>
       </div>
       <div class="row pt-4">
@@ -69,11 +91,33 @@
 </template>
 
 <style lang="css" scoped>
+
+.about-container{
+  position: relative;
+  height: 10vh;
+  /* height: fit-content; */
+  width: 98%;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: all 0.3s;
+  /* transform: scaleY(0.1); */
+}
+
+.about-container-open{
+  /* height: 115vh; */
+  /* transform: scaleY(1); */
+  height: fit-content;
+}
+
 .my-card{
   position: relative;
   min-width: 350px;
   width: 100%;
-  height: 65vh;
+  height: var(--my-card-base-height);
   border-radius: 20px;
   overflow: hidden;
   transition: 0.3s all;
@@ -103,7 +147,7 @@
 .my-card-title{
   position: relative;
   width: 100%;
-  height: 30%;
+  height: calc(var(--my-card-base-height) * 0.3);
   background-color: transparent;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -118,7 +162,7 @@
 .my-card-body{
   position: relative;
   width: 100%;
-  height: 70%;
+  height: calc(var(--my-card-base-height)*0.7);
   background-color: transparent;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -148,4 +192,5 @@
 .card-body{
   background-color: transparent !important;
 }
+
 </style>
