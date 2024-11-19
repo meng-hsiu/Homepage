@@ -4,7 +4,7 @@
     --a-tag-color:#000000;
     --a-tag-hover-color:#ffffff;
     --text-color:#000000;
-    --my-card-base-height: 55vh;
+    --my-card-base-height: 58vh;
 }
 
 .lxgw-wenkai-mono-tc-bold {
@@ -54,7 +54,7 @@ h3{
     font-size: 130%;
 }
 *{
-    font-size: 102%;
+    font-size: clamp(1rem,2vw,1.3rem);
     color:var(--text-color);
     /* color: white; */
 }
@@ -62,6 +62,7 @@ h3{
 
 /* 超連結 */
 .cta {
+    width: 100%;
     border: none;
     background: none;
     cursor: pointer;
@@ -142,9 +143,9 @@ h3{
     justify-content: center;
     align-items: center;
     min-width: 350px;
-    width: 350px;
+    width:100%;
     height: 15vh;
-    max-height: 270px;
+    max-height: 300px;
     background-image:var(--my-document-background-image);
     color: var(--my-document-text-color);
     font-size: 32px;
@@ -155,17 +156,28 @@ h3{
     position: relative;
     overflow: hidden;
 }
+@media (min-width:992px) {
+    
+}
+
+@media (min-width:1200px) {
+    .my-document{
+        width: 15vw;
+    }
+}
+
+
 .my-document:active {
     scale: 0.95;
 }
 .my-document::after {
     content: "";
-    width: 600px;
-    height: 600px;
+    width: 225%;
+    height: 500px;
     border-radius: 50%;
     background-image: var(--my-document-background-image-hover);
     position: absolute;
-    top: 400px;
+    top: 100px;
     transition: top 0.2s 0s ease-in-out;
     z-index: 1;
 }

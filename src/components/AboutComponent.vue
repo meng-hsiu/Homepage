@@ -21,10 +21,10 @@ const handleClick = () => {
 <template>
   <div class="about">
     <div class="container d-flex justify-content-center">
-      <div class="row w-100 py-4">
-        <div class="col-12 pb-5 d-flex justify-content-center">
+      <div class="row w-100 pb-4 pt-4 pt-md-3 pt-lg-2">
+        <div class="col-12 pb-3 d-flex justify-content-center">
           <!-- <button>開關</button> -->
-          <div @click="handleClick" class="typewriter"><h1 style="color: black;">>>點我看更多個人訊息<<</h1></div>
+          <div @click="handleClick" class="typewriter"><h1 style="color: black; font-size:clamp(1rem,3vw,2.5rem);"><i id="Information_text">Further Information<i id="Information" class="fa-solid fa-arrow-pointer" style="color: #64ceae;transform: translate(0.5vw,0vh) rotate(-45deg);"></i>&emsp13;</i></h1></div>
         </div>
         <div class="col-12 mb-5 pb-5 border-bottom">
           <div class="row">
@@ -85,6 +85,30 @@ const handleClick = () => {
 </template>
 
 <style lang="css" scoped>
+@media (hover:hover){
+  #Information_text:hover{
+    color:#ffffff;
+  }
+}
+
+#Information_text:active{
+  color:#ffffff;
+}
+#Information{
+  animation: 2s beats  infinite;
+}
+@keyframes beats{
+  0%{
+    scale: 1;
+  }
+  50%{
+    scale: 1.2;
+  }
+  100%{
+    scale: 1;
+  }
+}
+
 .about{
   position: relative;
 }

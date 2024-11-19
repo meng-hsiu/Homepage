@@ -17,7 +17,7 @@ onMounted(()=>{
 const parentFunction = () => {
   if(about_container_toggle.value){
     // about_container.classList.remove('about-container-open');
-    about_container.style.height = '10vh';
+    about_container.style.height = '8vh';
     about_container_toggle.value = !about_container_toggle.value
   }
   else{
@@ -42,44 +42,66 @@ const parentFunction = () => {
             <div class="my-card-img">
             </div>
             <div class="my-card-title">
-              <div class="row w-100 h-100">
+              <div class="row w-100 h-100 d-flex justify-content-center">
+                <div class="col-2 d-flex justify-content-center">
+                    <img style="object-fit: contain; max-height: calc(var(--my-card-base-height)*0.3);" src="/src/images/ot308_1.svg" alt="">
+                  </div>
+                  <div class="col-6"></div>
+                  <div class="col-2 d-flex justify-content-center">
+                    <img style="object-fit: contain; max-height: calc(var(--my-card-base-height)*0.3);" src="/src/images/pl159.svg" alt="">
+                  </div>
+                  <div class="col-2 d-flex justify-content-center">
+                    <img style="object-fit: contain; max-height: calc(var(--my-card-base-height)*0.3);" src="/src/images/pl040.svg" alt="">
+                  </div>
               </div>
             </div>
             <div class="my-card-body">
               <div class="my-card-body-text">
-                <span style="font-size:clamp(1rem,3vw,3rem); color:darkcyan">Hi</span>，我是謝孟修，先前在醫院工作，接受完<span style="text-decoration: underline;">資展國際全端工程師</span>培訓後轉職後，已有基本前、後端及資料庫操作能力，希望能成為一名工程師。
-                <br>
-                <br>
-                歡迎來到我的個人頁面，可點擊下方按鈕查看更多訊息
+                <div class="row w-100">
+                  <div class="col-3"></div>
+                  <div class="col-9">
+                    <span style="font-size:clamp(1.5rem,3vw,3rem); color:darkcyan">Hi</span>，我是謝孟修，先前在醫院工作，接受完<span style="text-decoration: underline;">資展國際全端工程師</span>培訓後轉職後，已有基本前、後端及資料庫操作能力，希望能成為一名工程師。
+                    <br>
+                    <br>
+                    歡迎來到我的個人頁面，可點擊下方按鈕查看更多訊息
+                  </div>
                 </div>
+              </div>
               <div class="my-card-body-text-link">
+              </div>
+              <div class="my-card-body-imgs">
+                <div class="row w-100" style="position: absolute;bottom: 0;">
+                  <div class="col-4 col-lg-3 col-xl-2">
+                    <img src="/src/images/go145_3.svg" alt="">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row my-3 d-flex justify-content-center">
         <div class="about-container shadow">
-          <AboutComponent @triggerParent="parentFunction()"></AboutComponent>
+            <AboutComponent @triggerParent="parentFunction()"></AboutComponent>
         </div>
       </div>
-      <div class="row pt-4">
-        <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center justify-content-lg-start">
-          <RouterLink class="cta" to="/personalProject">
+      <div class="row pt-1 pb-4">
+        <div class="col-xl-4 mb-3 mb-xl-0 d-flex justify-content-center">
+          <RouterLink class="cta d-flex justify-content-center justify-content-xl-start" to="/personalProject">
             <div class="my-document shadow">
               <p>個人作品</p>
             </div>
           </RouterLink>
         </div>
-        <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
-          <RouterLink class="cta" to="/partyProject">
+        <div class="col-xl-4 mb-3 mb-xl-0 d-flex justify-content-center">
+          <RouterLink class="cta d-flex justify-content-center" to="/partyProject">
             <div class="my-document shadow">
               <p>小組作品</p>
             </div>
           </RouterLink>
         </div>
-        <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center justify-content-lg-end">
-          <RouterLink class="cta" to="/contact">
+        <div class="col-xl-4 mb-3 mb-xl-0 d-flex justify-content-center">
+          <RouterLink class="cta d-flex justify-content-center justify-content-xl-end" to="/contact">
             <div class="my-document shadow">
               <p>聯絡我</p>
             </div>
@@ -93,23 +115,32 @@ const parentFunction = () => {
 <style lang="css" scoped>
 
 .about-container{
+  background-color: transparent;
   position: relative;
-  height: 10vh;
-  /* height: fit-content; */
-  width: 98%;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-right: 1%;
-  border-radius: 20px;
+  height: 8vh;
+  width: 96%;
+  min-width: 350px;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px;
   backdrop-filter: blur(20px);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(201, 201, 201, 0.1)
+  );
   overflow: hidden;
   transition: all 0.3s;
-  /* transform: scaleY(0.1); */
+}
+
+@media (min-width: 992px) {
+  .about-container{
+    width: 98%;
+    margin: 0 1% 0 1%;
+  }
 }
 
 .about-container-open{
-  /* height: 115vh; */
-  /* transform: scaleY(1); */
   height: fit-content;
 }
 
@@ -123,8 +154,10 @@ const parentFunction = () => {
   transition: 0.3s all;
 }
 
-.my-card:hover{
-  transform: translateY(-10px);
+@media (hover:hover) {  
+  .my-card:hover{
+    transform: translateY(-10px);
+  }
 }
 
 .my-card-img{
@@ -178,8 +211,9 @@ const parentFunction = () => {
 .my-card-body-text{
   position: absolute;
   top: 10%;
-  left: 25%;
-  width: 70%;
+  /* left: 25%; */
+  /* width: 70%; */
+  width: 100%;
   font-size: clamp(1rem, 2vw, 1.5rem)
 }
 
@@ -187,6 +221,13 @@ const parentFunction = () => {
   position: absolute;
   bottom: 5%;
   right: 5%;
+}
+
+.my-card-body-imgs{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15vh;
 }
 
 .card-body{
