@@ -117,7 +117,7 @@ const parentFunction = () => {
 .about-container{
   background-color: transparent;
   position: relative;
-  height: 8vh;
+  height: 7vh;
   width: 96%;
   min-width: 350px;
   margin-left: 2%;
