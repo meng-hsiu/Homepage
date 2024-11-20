@@ -146,7 +146,7 @@ onMounted(()=>{
   stroke: #ffffff;
   stroke-width: 1;
   stroke-dasharray: 515;
-  animation: textAnimation 7s ease-in-out forwards;
+  animation: textAnimation 5s ease-in-out forwards;
 }
 
 @keyframes textAnimation{

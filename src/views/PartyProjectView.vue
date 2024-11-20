@@ -1,5 +1,5 @@
 <script setup>
-    
+
 </script>
 
 <template>
@@ -15,7 +15,8 @@
                     </RouterLink>
                     </div>
                     <div class="col-12 my-5">
-                        <img class="w-100" src="/src/images/MyGoParking.png" alt="">
+                        <!-- <img class="w-100" src="/src/images/MyGoParking.gif" alt=""> -->
+                        <video class="w-100" controls src="/src/images/MyGoParking.mp4"></video>
                     </div>
                     <div class="col-12">
                     <h2 class="mb-3">專案發想緣由：</h2>

@@ -61,6 +61,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 mb-5 border-bottom pb-5">
+                    <a href="https://github.com/meng-hsiu/Homepage" target="_blank"><h2 class=""><i class="fa-brands fa-github"></i>Homepage</h2></a>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img class="w-100" src="/src/images/Homepage.png" alt="">
+                        </div>
+                        <div class="col-md-7">
+                            &emsp;&emsp;個人製作的網頁，希望可以以比較有互動的方式呈現履歷。
+                            <br>
+                            &emsp;&emsp;專案使用到了Vue.js、Bootstrap、CSS(自定義的動畫或屬性)。
+                            <br>
+                            圖片素材：<i class="fa-solid fa-globe"><a href="https://vectorshelf.com/">Vector Shelf</a></i>
+                            <br>
+                            背景素材：<i class="fa-brands fa-square-github"><a href="https://github.com/baunov/gradients-bg">baunov/gradients-bg</a></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

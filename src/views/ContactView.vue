@@ -14,9 +14,13 @@
                         <span class="hover-underline-animation fs-3">Home</span>
                     </RouterLink>
                 </div>
-                <div class="col-12 py-4">
-                    <h1 class="">Email:</h1>
-                    <h1 class="">&emsp;&emsp;menghsiu0120@gmail.com</h1>
+                <div class="col-12 p-4">
+                    <h1 class="m-0">Email:</h1>
+                    <h2 class="">&emsp;&emsp;menghsiu0120@gmail.com</h2>
+                    <h1 class="m-0">Github：</h1>
+                    <a href="https://github.com/meng-hsiu"><h2>&emsp;&emsp;https://github.com/meng-hsiu</h2></a>
+                    <h1 class="m-0">Cake：</h1>
+                    <a href="https://www.cake.me/s--tr3yvIDk1ec742xEIaz7qg--/menghsiu0120?item-just-published=true"><h2>&emsp;&emsp;https://reurl.cc/DK9DV5</h2></a>
                 </div>
             </div>
         </div>
