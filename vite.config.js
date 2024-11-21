@@ -11,7 +11,7 @@ export default defineConfig({
       targets: [
         {
           src: '404.html', // 源文件
-          dest: 'dist', // 目標目錄
+          dest: './', // 目標目錄
         },
       ],
     }),

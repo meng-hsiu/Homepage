@@ -31,10 +31,4 @@
 .contact{
     position: absolute;
 }
-
-.mail-button{
-    position: absolute;
-    width: 70%;
-    bottom: 10vh;
-}
 </style>

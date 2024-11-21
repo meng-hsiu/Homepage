@@ -21,7 +21,7 @@ const handleClick = () => {
 <template>
   <div class="about">
     <div class="container d-flex justify-content-center">
-      <div class="row w-100 pb-4 pt-4 pt-md-3 pt-lg-1">
+      <div class="row w-100 pb-4 pt-lg-1">
         <div class="col-12 pb-3 d-flex justify-content-center">
           <!-- <button>開關</button> -->
           <div @click="handleClick" class="typewriter"><h1 style="color: black; font-size:clamp(1rem,3vw,2.5rem);"><i id="Information_text">Further Information<i id="Information" class="fa-solid fa-arrow-pointer" style="color: #64ceae;transform: translate(0.5vw,0vh) rotate(-45deg);"></i>&emsp13;</i></h1></div>
@@ -113,28 +113,5 @@ const handleClick = () => {
   position: relative;
 }
 
-.typewriter h1 {
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 2.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(255, 255, 255) }
-}
 </style>

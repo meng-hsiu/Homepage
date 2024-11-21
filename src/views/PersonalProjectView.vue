@@ -87,14 +87,4 @@
 .personal{
     position: absolute;
 }
-.modal-content{
-    background-color: transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    background-image: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.7)
-    );
-}
 </style>
