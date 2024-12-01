@@ -16,7 +16,10 @@
                     </div>
                     <div class="col-12 my-5">
                         <!-- <img class="w-100" src="/src/images/MyGoParking.gif" alt=""> -->
-                        <video class="w-100" controls src="/src/images/MyGoParking.mp4"></video>
+                        <!-- <video class="w-100" controls src="/src/images/MyGoParking.mp4"></video> -->
+                        <div style="width: 100%;height: 40vw;">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SPIKRU8j1JA?si=_8lTEAfgxn6egtLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
                     <div class="col-12">
                     <h2 class="mb-3">專案發想緣由：</h2>
