@@ -60,7 +60,7 @@ const parentFunction = () => {
                 <div class="row w-100">
                   <div class="col-3"></div>
                   <div class="col-9">
-                    <span style="font-size:clamp(1.5rem,3vw,3rem); color:darkcyan">Hi</span>，我是謝孟修，先前在醫院工作，接受完<span style="text-decoration: underline;">資展國際全端工程師</span>培訓後轉職後，已有基本前、後端及資料庫操作能力，希望能成為一名工程師。
+                    <span style="font-size:clamp(1.5rem,3vw,3rem); color:darkcyan">Hi</span>，我是謝孟修，先前在醫院工作，接受完<span style="text-decoration: underline;">資展國際全端工程師</span>培訓後，已有基本前、後端及資料庫操作能力，希望能成為一名工程師。
                     <br>
                     <br>
                     歡迎來到我的個人頁面，可點擊下方按鈕查看更多訊息
